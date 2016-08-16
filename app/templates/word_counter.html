@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Item 2 Vec Recommender</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{     url_for('static', filename = "vendor/bootstrap/css/bootstrap.min.css")     }}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{     url_for('static', filename = "vendor/font-awesome/css/font-awesome.min.css")     }}" rel="stylesheet" type="text/css">
+    <link href="{{     url_for('static', filename = 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800')      }}" rel='stylesheet' type='text/css'>
+    <link href="{{     url_for('static', filename = 'https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic')    }}" rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="{{     url_for('static', filename ="vendor/magnific-popup/magnific-popup.css")       }}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{{     url_for('static', filename ="css/creative.min.css")         }}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+{% block body %}
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="index#page-top">Item2Vec</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="index#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index#submit">Live Demo</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index#services">How it works?</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index#Performance">Performance</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index#futures">Future works</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index#contact">Thanks To</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+                <!-- ORGINAL -->
+                <!-- <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">List of the recommended items</h2>
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th class=text-center>User ID</th>
+                            <th class=text-center>Recommended items</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for prediction in predictions %}
+                              <tr>
+                                <td class="col-md-1">{{prediction['userId']}}</td>
+                                <td class="col-md-6">{{prediction['Recommended_list']}}</td>
+                              </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                </div> -->
+                <!-- <div class="col-lg-8 col-lg-offset-2 text-center", style="margin-top:64px">
+                  <h3 class="section-heading">What are those?</h3>
+                  <table class="table table-hover">
+                    <thead>
+
+                      <tr>
+                        <th class=text-center>User ID</th>
+                        <th class=text-center>Recommended items</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for prediction in predictions %}
+                          <tr>
+                            <td class="col-md-1">{{prediction['userId']}}</td>
+                            <td class="col-md-6">
+                              {% for item in prediction['Recommended_list'] %}
+                                  <p>{{item}}</p>
+                                  <a href="{{     url_for('static', filename ="img/CF/CFitembased.png")}}" class="portfolio-box">
+                                    <img src="{{     url_for('static', filename ="img/CF/CFitembased.png")}}" class="img-responsive" alt="">
+                                  </a>
+                               {% endfor %}
+                            </td>
+                          </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div> -->
+                <div class="col-lg-20 col-lg-offset-0 text-center">
+                    <h2 class="section-heading">List of the recommended items</h2>
+                      <table class="table table">
+                        <thead>
+                          <tr>
+                            <th class=text-center>Liked</th>
+                            <th class=text-center>Disliked</th>
+                            <th class=text-center>Recommended</th>
+                            <th class=text-center>Genres</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for item in items %}
+                              <tr>
+                                <td class="col-md-2">
+                                  {% for movies in item['Liked'] %}
+                                    <p>{{movies}}</p>
+                                  {% endfor %}
+                                </td>
+                                <td class="col-md-2">
+                                  {% for movies in item['Disliked'] %}
+                                    <p>{{movies}}</p>
+                                  {% endfor %}
+                                </td>
+                                <td class="col-md-6">
+                                  {% for movies in item['Recommended'] %}
+                                      <p>{{movies}}</p>
+                                  {% endfor %}
+                                </td>
+                                <td class="col-md-4">
+                                  {% for genres in item['Genres'] %}
+                                      <p>{{genres}}</p>
+                                  {% endfor %}
+                                </td>
+                              </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                </div>
+
+                <div class="col-lg-16 col-lg-offset-0 text-center", style="margin-top:64px">
+                  <h3 class="section-heading">What are those?</h3>
+                  <table class="table table">
+                    <thead>
+                      <tr>
+                        <th class=text-center>title</th>
+                        <th class=text-center>poster</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for item in items %}
+                          <tr>
+
+                            <td class="text-center">
+                              {% for movies in item['Recommended'] %}
+                                  <p>{{movies}}
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                  </p>
+                              {% endfor %}
+                            </td>
+
+                            <td class="text-center">
+                              {% for movies in item['url'] %}
+                                  <!-- <p>{{movies}}</p> -->
+                                    <a href={{movies}} class="portfolio-box", style="margin-bottom:32px">
+                                      <img src={{movies}} class="img-fluid center-block" alt="" style="min-height:272px;height:272px;" >
+                                    </a>
+                              {% endfor %}
+                            </td>
+                          </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- <div class="col-lg-16 col-lg-offset-0 text-center", style="margin-top:64px">
+                  <h3 class="section-heading">What are those?</h3>
+                  <table class="table table">
+                    <thead>
+                      <tr>
+                        <th class=text-center>title</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for item in items %}
+                          <tr>
+                            <td class="text-center">
+                              {% for movies in item['url'] %}
+                                    <a href={{movies}} class="portfolio-max">
+                                      <img src={{movies}} class="img-fluid center-block" alt="">
+                                    </a>
+                               {% endfor %}
+                            </td>
+                          </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div> -->
+        </div>
+    </section>
+
+    <aside class="bg-dark" id="submit">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Live Demo</h2>
+                <form action="/submission_page_copy" method="get">
+                  <a href="submission_page_copy" class="btn btn-default btn-xl sr-button">Let's see!</a>
+                </form>
+                <hr class = 'primary'>
+                <p> Do you want try more?
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- jQuery -->
+    <script src="{{     url_for('static', filename ="vendor/jquery/jquery.min.js")}}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{     url_for('static', filename ="vendor/bootstrap/js/bootstrap.min.js")}}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{     url_for('static', filename ="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js")}}"></script>
+    <script src="{{     url_for('static', filename ="vendor/scrollreveal/scrollreveal.min.js")}}"></script>
+    <script src="{{     url_for('static', filename ="vendor/magnific-popup/jquery.magnific-popup.min.js")}}"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{{     url_for('static', filename ="js/creative.min.js")}}"></script>
+{% endblock %}
+</body>
+</html>

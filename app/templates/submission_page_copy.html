@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Item 2 Vec Recommender</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="{{     url_for('static', filename = "vendor/bootstrap/css/bootstrap.min.css")     }}" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="{{     url_for('static', filename = "vendor/font-awesome/css/font-awesome.min.css")     }}" rel="stylesheet" type="text/css">
+  <link href="{{     url_for('static', filename = 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800')      }}" rel='stylesheet' type='text/css'>
+  <link href="{{     url_for('static', filename = 'https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic')    }}" rel='stylesheet' type='text/css'>
+
+  <!-- Plugin CSS -->
+  <link href="{{     url_for('static', filename ="vendor/magnific-popup/magnific-popup.css")       }}" rel="stylesheet">
+
+  <!-- Theme CSS -->
+  <link href="{{     url_for('static', filename ="css/creative.min.css")         }}" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+
+<body>
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+              </button>
+              <a class="navbar-brand page-scroll" href="index#page-top">Item2Vec</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li>
+                      <a class="page-scroll" href="index#about">About</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="index#submit">Live Demo</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="index#services">How it works?</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="index#Performance">Performance</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="index#futures">Future works</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="index#contact">Thanks To</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+
+  <section class="bg-dark">
+      <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center" , style="margin-top:64px">
+              <div class="col-lg-12 text-center">
+                  <h1 class="section-heading">Live Demo!</h1>
+              </div>
+              <div class="call-to-action">
+                <form action="/word_counter" method='POST' >
+                    <input class="form-control form-control-lg" placeholder="'liked movies | disliked movies'" type="text" name="user_input" />
+                    </br>
+                    <input type="submit" class="btn-primary">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <section class="bg-primary">
+      <div class="container">
+          <div class="row">
+            <div class="col-lg-16 col-lg-offset-0 text-center">
+              <div class="col-lg-12 text-center">
+                  <h3 class="section-heading">Example Queries</h3>
+                  <hr class = 'light'>
+                  </br>
+                  </br>
+                  <h3>Can handle several cases simultaneously</h3>
+
+                  <table class="table table-hover" , style="margin-top:32px">
+                    <thead>
+                      <tr>
+                        <!-- <th class="text-center">User</th> -->
+                        <th class="text-faded text-center col-md-2">User</th>
+                        <th class="text-faded text-center col-md-6">Liked Movies</th>
+                        <th class="text-faded text-center col-md-6">Disliked Movies</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-faded text-center">Jackson</td>
+                        <td class="text-faded text-center">Never Ending Story, Home Alone</th>
+                        <td class="text-faded text-center">Exorcist,Saw</th>
+                      </tr>
+                      <tr>
+                        <td class="text-faded text-center">Patrick</td>
+                        <td class="text-faded text-center">Exorcist, Saw, Conjuring</th>
+                        <td class="text-faded text-center">Toy Story,Jungle Book</th>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <p class="text-danger">
+                    'Never Ending Story*,Home Alone*|Exorcist*,Saw*'
+                    ^'Saws*,Psycho*,Friday the 13th*|Toy Story*,Jungle Book*'
+                      </br>
+                      </br>
+                      </br>
+                      </br>
+                      </br>
+                      </br>
+
+                    </p>
+                    <h3 style=>As well as a single case</h3>
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th class="text-faded text-center col-md-2">User</th>
+                          <th class="text-faded text-center col-md-6">Liked Movies</th>
+                          <th class="text-faded text-center col-md-6">Disliked Movies</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-faded text-center">Eunice</td>
+                          <th class="text-faded text-center">Back To The Future, Star Trek</th>
+                          <th class="text-faded text-center">Exorcist,Texas Chainsaw Massacre</th>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  <p class="text-danger">'Back To The Future*,Star Trek*|Exorcist*,Texas Chainsaw Massacre*'</p>
+                  </br>
+                  </br>
+                  </br>
+
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th class="text-faded text-center col-md-2">User</th>
+                        <th class="text-faded text-center col-md-6">Liked Movies</th>
+                        <th class="text-faded text-center col-md-6">Disliked Movies</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-faded text-center">Howard</td>
+                        <th class="text-faded text-center">Mulan, Jungle Book</th>
+                        <th class="text-faded text-center">Exorcist, Psycho</th>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <p class="text-danger">'Mulan*,Jungle Book*|Exorcist*,Psycho*'</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
+
+
+    <!-- jQuery -->
+    <script src="{{     url_for('static', filename ="vendor/jquery/jquery.min.js")}}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{     url_for('static', filename ="vendor/bootstrap/js/bootstrap.min.js")}}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{     url_for('static', filename ="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js")}}"></script>
+    <script src="{{     url_for('static', filename ="vendor/scrollreveal/scrollreveal.min.js")}}"></script>
+    <script src="{{     url_for('static', filename ="vendor/magnific-popup/jquery.magnific-popup.min.js")}}"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{{     url_for('static', filename ="js/creative.min.js")}}"></script>
+
+</body>
+
+</html>
