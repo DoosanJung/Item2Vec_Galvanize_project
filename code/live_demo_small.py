@@ -15,6 +15,7 @@ import urllib2
 
 def get_soup(url,header):
     return BeautifulSoup(urllib2.urlopen(urllib2.Request(url,headers=header)),'lxml')
+
 def find_imgs(titles):
     images_url = []
     for query in titles:
@@ -127,6 +128,9 @@ def main(model,movies_contents,str_input_list_liked, str_input_list_disliked):
         else:
             extracted = pd.DataFrame(columns=['title','genres'])
             images_url = []
+
+    else:
+        extracted =[], images_url = find_imgs('none')
 
     return extracted, recommendations, images_url
 
