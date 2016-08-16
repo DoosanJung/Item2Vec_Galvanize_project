@@ -1,7 +1,7 @@
 from gensim.models import Word2Vec
 
 class Word2VecRecommender(object):
-    DEFAULT_WORD2VEC_PARAMETERS = dict(size=200, window=100000, min_count=5, hs=1 , workers=8)
+    DEFAULT_WORD2VEC_PARAMETERS = dict(size=300, window=100000, min_count=5, hs=1 , workers=8)
 
     def __init__(self, **word2vec_parameters):
         self.word2vec_params = dict(Word2VecRecommender.DEFAULT_WORD2VEC_PARAMETERS)

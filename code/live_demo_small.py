@@ -130,8 +130,10 @@ def main(model,movies_contents,str_input_list_liked, str_input_list_disliked):
             images_url = []
 
     else:
-        extracted =[], images_url = find_imgs('none')
-
+        # TODO: No recommendations case
+        extracted =[]
+        images_url = ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/No_sign.svg/2000px-No_sign.svg.png']
+        recommendations=pd.DataFrame()
     return extracted, recommendations, images_url
 
 
