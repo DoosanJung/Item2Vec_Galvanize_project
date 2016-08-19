@@ -38,9 +38,9 @@ h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif, test-align:center;
 }
 p {
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
 .bg-primary {
   background-color: #F16053;
@@ -182,7 +182,7 @@ header .header-content .header-content-inner hr {
 header .header-content .header-content-inner p {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
+  font-size: 24px;
   margin-bottom: 50px;
 }
 @media (min-width: 768px) {
@@ -206,7 +206,7 @@ header .header-content .header-content-inner p {
     font-size: 50px;
   }
   header .header-content .header-content-inner p {
-    font-size: 18px;
+    font-size: 24px;
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -262,10 +262,10 @@ header .header-content .header-content-inner p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 24px;
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-  font-size: 18px;
+  font-size: 24px;
 }
 .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
@@ -275,10 +275,10 @@ header .header-content .header-content-inner p {
 }
 @media (min-width: 768px) {
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    font-size: 16px;
+    font-size: 24px;
   }
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 .call-to-action h2 {
