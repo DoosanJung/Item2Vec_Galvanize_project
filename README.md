@@ -12,3 +12,16 @@ Item2Vec is introduced for scalable item-item collaborative filtering. Item2Vec 
 
 #### Data
 MovieLens latest datasets - [Full dataset](http://grouplens.org/datasets/movielens/latest/)(22,000,000 ratings and 580,000 tag applications applied to 33,000 movies by 240,000 users. Last updated 1/2016.)
+
+#### References and Packages used
+[Item2Vec](https://arxiv.org/pdf/1603.04259.pdf)
+[Gensim](https://radimrehurek.com/gensim/)
+[Sparsesvd](https://pypi.python.org/pypi/sparsesvd/)
+[Flask](http://flask.pocoo.org/)
+[BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
+[Bootstrap](http://getbootstrap.com/)
+[From word embeddings to item recommendation](https://arxiv.org/pdf/1601.01356.pdf)
+
+#### Video demo and Slides
+[Video demo](https://youtu.be/L_ktRIDjqRg)
+[Slides](https://docs.google.com/presentation/d/1kPe0RocrqYM0FRX-Isi4PdoTYeWYwZbyZddEoECOMvY/edit?usp=sharing)
