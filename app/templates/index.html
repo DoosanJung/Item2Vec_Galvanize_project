@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Item2Vec Recommender">
+    <meta name="author" content="Doosan Jung">
 
     <title>Item 2 Vec Recommender</title>
 
@@ -31,7 +30,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body id="page-top">
@@ -191,7 +189,7 @@
                     <h3>Collaborative Filtering</h3>
                 </div>
                 <a href="{{     url_for('static', filename ="img/CF/CFitembased.png")}}" class="portfolio-box">
-                  <img src="{{     url_for('static', filename ="img/CF/CFitembased.png")}}" class="img-responsive" alt="">
+                  <img class="img-responsive" src="{{     url_for('static', filename ="img/CF/CFitembased.png")}}" class="img-responsive" alt="Collaborative Filtering image">
                 </a>
                 <p class="text-center"> ( * figures from
                   <a href="https://johnolamendy.wordpress.com/2015/10/14/collaborative-filtering-in-apache-spark/">JC Olamendy's thought</a> )
@@ -215,12 +213,12 @@
                   <div class="container-fluid">
                     <div class="row">
                       <div class="col-lg-10 col-lg-offset-1 text-center">
-                        <div class="row no-gutter popup-gallery">
-                          <div class="col-lg-4 col-sm-6">
+                        <div class="row no-gutter popup-gallery  ">
+                          <div class="col-lg-4 col-sm-6  ">
                                 <a href="{{     url_for('static', filename ="img/Word2Vec/StarTrek.jpg")}}" class="portfolio-box">
-                                    <img src="{{     url_for('static', filename ="img/Word2Vec/StarTrek.jpg")}}" class="img-responsive" alt="">
-                                    <div class="portfolio-box-caption" "text-center">
-                                      <div class="portfolio-box-caption-content">
+                                    <img class="img-responsive" src="{{     url_for('static', filename ="img/Word2Vec/StarTrek.jpg")}}" class="img-responsive  " alt="StarTrek poster">
+                                    <div class="portfolio-box-caption text-center  ">
+                                      <div class="portfolio-box-caption-content  ">
                                           <div class="project-name">
                                             Movie 1: StarTrek
                                           </div>
@@ -228,11 +226,11 @@
                                     </div>
                                 </a>
                             </div>
-                          <div class="col-lg-4 col-sm-6">
+                          <div class="col-lg-4 col-sm-6  ">
                               <a href="{{     url_for('static', filename ="img/Word2Vec/BackToTheFuture.jpg")}}" class="portfolio-box">
-                                  <img src="{{     url_for('static', filename ="img/Word2Vec/BackToTheFuture.jpg")}}" class="img-responsive" alt="">
-                                  <div class="portfolio-box-caption" "text-center">
-                                    <div class="portfolio-box-caption-content">
+                                  <img class="img-responsive" src="{{     url_for('static', filename ="img/Word2Vec/BackToTheFuture.jpg")}}" class="img-responsive  " alt="BackToTheFutre poster">
+                                  <div class="portfolio-box-caption text-center  ">
+                                    <div class="portfolio-box-caption-content  ">
                                         <div class="project-name">
                                           Movie 2: Back to the future
                                         </div>
@@ -240,11 +238,11 @@
                                   </div>
                               </a>
                           </div>
-                          <div class="col-lg-4 col-sm-6">
+                          <div class="col-lg-4 col-sm-6  ">
                               <a href="{{     url_for('static', filename ="img/Word2Vec/Exorcist.jpg")}}" class="portfolio-box">
-                                  <img src="{{     url_for('static', filename ="img/Word2Vec/Exorcist.jpg")}}" class="img-responsive" alt="">
-                                  <div class="portfolio-box-caption" "text-center">
-                                    <div class="portfolio-box-caption-content">
+                                  <img class="img-responsive" src="{{     url_for('static', filename ="img/Word2Vec/Exorcist.jpg")}}" class="img-responsive  " alt="Exorcist poster">
+                                  <div class="portfolio-box-caption text-center  ">
+                                    <div class="portfolio-box-caption-content  ">
                                         <div class="project-name">
                                           Movie 3: Exorcist
                                         </div>
@@ -258,7 +256,7 @@
                   </div>
                   <div style="margin-top:64px">
                     <a href="{{     url_for('static', filename ="img/Word2Vec/compare1.png")}}" class="portfolio-box">
-                      <img src="{{     url_for('static', filename ="img/Word2Vec/compare1.png")}}" class="img-responsive" alt="">
+                      <img class="img-responsive" src="{{     url_for('static', filename ="img/Word2Vec/compare1.png")}}" class="img-responsive" alt="compare words">
                     </a>
                   </div>
               </div>
@@ -271,7 +269,7 @@
                     </br> Vector "Star Trek" + Vector "Back To The Future" - Vector "Exorcist" = ?
                   </p>
                   <a href="{{     url_for('static', filename ="img/Word2Vec/compare2.png")}}" class="portfolio-box">
-                    <img src="{{     url_for('static', filename ="img/Word2Vec/compare2.png")}}" class="img-responsive" alt="">
+                    <img class="img-responsive" src="{{     url_for('static', filename ="img/Word2Vec/compare2.png")}}" class="img-responsive" alt="compare movies">
                   </a>
                   <p class="text-center">
                       </br> As shown above, we can think the items in the basket as the words in the sentence.
@@ -304,12 +302,12 @@
                       <tr>
                         <td class="text-center">
                           <a href="{{     url_for('static', filename ="img/Performance/recall2.png")}}" class="portfolio-box", style="margin-bottom:32px">
-                            <img src="{{     url_for('static', filename ="img/Performance/recall2.png")}}" class="img-fluid center-block" alt="" style="min-height:272px;height:272px;" >
+                            <img class="img-responsive" src="{{     url_for('static', filename ="img/Performance/recall2.png")}}" class="img-fluid center-block" alt="recall" style="min-height:272px;height:272px;" >
                           </a>
                         </td>
                         <td class="text-center">
                           <a href="{{     url_for('static', filename ="img/Performance/recall3.png")}}" class="portfolio-box", style="margin-bottom:32px">
-                            <img src="{{     url_for('static', filename ="img/Performance/recall3.png")}}" class="img-fluid center-block" alt="" style="min-height:272px;height:272px;" >
+                            <img class="img-responsive" src="{{     url_for('static', filename ="img/Performance/recall3.png")}}" class="img-fluid center-block" alt="recall" style="min-height:272px;height:272px;" >
                           </a>
                         </td>
                       </tr>
@@ -317,7 +315,7 @@
                   </table>
                   </div>
                   <a href="{{     url_for('static', filename ="img/Performance/recall.png")}}" class="portfolio-box">
-                    <img src="{{     url_for('static', filename ="img/Performance/recall.png")}}" class="img-responsive" alt="">
+                    <img class="img-responsive" src="{{     url_for('static', filename ="img/Performance/recall.png")}}" class="img-responsive" alt="recall">
                   </a>
               </div>
               <div class="col-lg-12 col-lg-offset-0 text-center", style="margin-top:64px">
@@ -328,7 +326,7 @@
                 </div>
                     <p class="text-center">
                       <a href="{{     url_for('static', filename ="img/How/numbers.png")}}" class="portfolio-box">
-                        <img src="{{     url_for('static', filename ="img/How/numbers.png")}}" class="img-responsive" alt="">
+                        <img class="img-responsive" src="{{     url_for('static', filename ="img/How/numbers.png")}}" class="img-responsive" alt="Numbers for Dataset">
                       </a>
                     </p>
                     <p>
@@ -346,7 +344,7 @@
                     <p class="text-center">
                     </br>
                       <a href="{{     url_for('static', filename ="img/How/construct2.png")}}" class="portfolio-box">
-                        <img src="{{     url_for('static', filename ="img/How/construct2.png")}}" class="img-responsive" alt="">
+                        <img class="img-responsive" src="{{     url_for('static', filename ="img/How/construct2.png")}}" class="img-responsive" alt="train/test set">
                       </a>
                     </p>
               </div>
@@ -373,12 +371,12 @@
             <tr>
               <td class="text-center">
                 <a href="{{     url_for('static', filename ="img/Performance/Mean_SVD_I2V_CBOW_HS.png")}}" class="portfolio-box", style="margin-bottom:32px">
-                  <img src="{{     url_for('static', filename ="img/Performance/Mean_SVD_I2V_CBOW_HS.png")}}" class="img-fluid center-block" alt="" style="min-height:272px;height:272px;" >
+                  <img class="img-responsive" src="{{     url_for('static', filename ="img/Performance/Mean_SVD_I2V_CBOW_HS.png")}}" class="img-fluid center-block" alt="mean" style="min-height:272px;height:272px;" >
                 </a>
               </td>
               <td class="text-center">
                 <a href="{{     url_for('static', filename ="img/Performance/Std_SVD_I2V_CBOW_HS.png")}}" class="portfolio-box", style="margin-bottom:32px">
-                  <img src="{{     url_for('static', filename ="img/Performance/Std_SVD_I2V_CBOW_HS.png")}}" class="img-fluid center-block" alt="" style="min-height:272px;height:272px;" >
+                  <img class="img-responsive" src="{{     url_for('static', filename ="img/Performance/Std_SVD_I2V_CBOW_HS.png")}}" class="img-fluid center-block" alt="stdev" style="min-height:272px;height:272px;" >
                 </a>
               </td>
             </tr>
@@ -423,7 +421,7 @@
           <div class="row no-gutter popup-gallery">
               <div class="col-lg-4 col-sm-6">
                 <a href="{{     url_for('static', filename ="img/Performance/SVD_CBOW_52.png")}}" class="portfolio-box">
-                    <img src="{{     url_for('static', filename ="img/Performance/SVD_CBOW_52.png")}}" class="img-responsive" alt="">
+                    <img class="img-responsive" src="{{     url_for('static', filename ="img/Performance/SVD_CBOW_52.png")}}" class="img-responsive" alt="cbow">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-name">
@@ -435,7 +433,7 @@
               </div>
               <div class="col-lg-4 col-sm-6">
                 <a href="{{     url_for('static', filename ="img/Performance/SVD_HS_52.png")}}" class="portfolio-box">
-                    <img src="{{     url_for('static', filename ="img/Performance/SVD_HS_52.png")}}" class="img-responsive" alt="">
+                    <img class="img-responsive" src="{{     url_for('static', filename ="img/Performance/SVD_HS_52.png")}}" class="img-responsive" alt="hs">
                     <div class="portfolio-box-caption">
 
                         <div class="portfolio-box-caption-content">
@@ -448,7 +446,7 @@
               </div>
               <div class="col-lg-4 col-sm-6">
                 <a href="{{     url_for('static', filename ="img/Performance/HS_CBOW_42.png")}}" class="portfolio-box">
-                    <img src="{{     url_for('static', filename ="img/Performance/HS_CBOW_42.png")}}" class="img-responsive" alt="">
+                    <img class="img-responsive" src="{{     url_for('static', filename ="img/Performance/HS_CBOW_42.png")}}" class="img-responsive" alt="2 models">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-name">
@@ -522,7 +520,7 @@
                   <!-- Item2Vec: Neural Item Embedding for Collaborative Filtering -->
                     <p>
                       <a href="{{     url_for('static', filename ="img/Thanksto/Item2Vec_img.png")}}" class="portfolio-box">
-                          <img src="{{     url_for('static', filename ="img/Thanksto/Item2Vec_img.png")}}" class="img-responsive" alt="">
+                          <img class="img-responsive" src="{{     url_for('static', filename ="img/Thanksto/Item2Vec_img.png")}}" class="img-responsive" alt="Item2Vec">
                       </a>
                     </p>
                 </div>
@@ -530,28 +528,28 @@
                   <!-- Gensim: Topic modelling for humans - Radim Řehůřek -->
                   <p>
                     <a href="{{     url_for('static', filename ="img/Thanksto/Gensim_img.jpg")}}" class="portfolio-box">
-                        <img src="{{     url_for('static', filename ="img/Thanksto/Gensim_img.jpg")}}" class="img-responsive" alt="">
+                        <img class="img-responsive" src="{{     url_for('static', filename ="img/Thanksto/Gensim_img.jpg")}}" class="img-responsive" alt="Gensim">
                     </a>
                   </p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
                     <p>
                       <a href="{{     url_for('static', filename ="img/Thanksto/flask_img.png")}}" class="portfolio-box">
-                          <img src="{{     url_for('static', filename ="img/Thanksto/flask_img.png")}}" class="img-responsive" alt="">
+                          <img class="img-responsive" src="{{     url_for('static', filename ="img/Thanksto/flask_img.png")}}" class="img-responsive" alt="Flask">
                       </a>
                     </p>
                 </div>
                 <div class="col-lg-4 text-center">
                   <p>
                     <a href="{{     url_for('static', filename ="img/Thanksto/bootstrap2.png")}}" class="portfolio-box">
-                        <img src="{{     url_for('static', filename ="img/Thanksto/bootstrap2.png")}}" class="img-responsive" alt="">
+                        <img class="img-responsive" src="{{     url_for('static', filename ="img/Thanksto/bootstrap2.png")}}" class="img-responsive" alt="Bootstrap2">
                     </a>
                   </p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
                   <p>
                     <a href="{{     url_for('static', filename ="img/Thanksto/bs2.png")}}" class="portfolio-box">
-                        <img src="{{     url_for('static', filename ="img/Thanksto/bs2.png")}}" class="img-responsive" alt="">
+                        <img class="img-responsive" src="{{     url_for('static', filename ="img/Thanksto/bs2.png")}}" class="img-responsive" alt="BeautifulSoup4">
                     </a>
                   </p>
                 </div>
@@ -559,7 +557,7 @@
                   <!-- Galvanize -->
                   <p>
                     <a href="{{     url_for('static', filename ="img/Thanksto/Galvanize-Galvanize-logomark-text-only-2-2.png")}}" class="portfolio-box">
-                        <img src="{{     url_for('static', filename ="img/Thanksto/Galvanize-Galvanize-logomark-text-only-2-2.png")}}" class="img-responsive" alt="">
+                        <img class="img-responsive" src="{{     url_for('static', filename ="img/Thanksto/Galvanize-Galvanize-logomark-text-only-2-2.png")}}" class="img-responsive" alt="Galvanize">
                     </a>
                   </p>
                 </div>
