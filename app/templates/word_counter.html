@@ -53,7 +53,7 @@
                         <a class="page-scroll" href="index#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="index#services">How it works?</a>
+                        <a class="page-scroll" href="index#services">How does it work?</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="index#Performance">Performance</a>
@@ -76,53 +76,6 @@
 
     <section class="bg-primary" id="about">
         <div class="container">
-                <!-- ORGINAL -->
-                <!-- <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">List of the recommended items</h2>
-                      <table class="table table-hover">
-                        <thead>
-                          <tr>
-                            <th class=text-center>User ID</th>
-                            <th class=text-center>Recommended items</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {% for prediction in predictions %}
-                              <tr>
-                                <td class="col-md-1">{{prediction['userId']}}</td>
-                                <td class="col-md-6">{{prediction['Recommended_list']}}</td>
-                              </tr>
-                          {% endfor %}
-                        </tbody>
-                      </table>
-                </div> -->
-                <!-- <div class="col-lg-8 col-lg-offset-2 text-center", style="margin-top:64px">
-                  <h3 class="section-heading">What are those?</h3>
-                  <table class="table table-hover">
-                    <thead>
-
-                      <tr>
-                        <th class=text-center>User ID</th>
-                        <th class=text-center>Recommended items</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {% for prediction in predictions %}
-                          <tr>
-                            <td class="col-md-1">{{prediction['userId']}}</td>
-                            <td class="col-md-6">
-                              {% for item in prediction['Recommended_list'] %}
-                                  <p>{{item}}</p>
-                                  <a href="{{     url_for('static', filename ="img/CF/CFitembased.png")}}" class="portfolio-box">
-                                    <img src="{{     url_for('static', filename ="img/CF/CFitembased.png")}}" class="img-responsive" alt="">
-                                  </a>
-                               {% endfor %}
-                            </td>
-                          </tr>
-                      {% endfor %}
-                    </tbody>
-                  </table>
-                </div> -->
                 <div class="col-lg-20 col-lg-offset-0 text-center">
                     <h2 class="section-heading">List of the recommended items</h2>
                       <table class="table table">
@@ -209,30 +162,6 @@
                     </tbody>
                   </table>
                 </div>
-
-                <!-- <div class="col-lg-16 col-lg-offset-0 text-center", style="margin-top:64px">
-                  <h3 class="section-heading">What are those?</h3>
-                  <table class="table table">
-                    <thead>
-                      <tr>
-                        <th class=text-center>title</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {% for item in items %}
-                          <tr>
-                            <td class="text-center">
-                              {% for movies in item['url'] %}
-                                    <a href={{movies}} class="portfolio-max">
-                                      <img src={{movies}} class="img-fluid center-block" alt="">
-                                    </a>
-                               {% endfor %}
-                            </td>
-                          </tr>
-                      {% endfor %}
-                    </tbody>
-                  </table>
-                </div> -->
         </div>
     </section>
 

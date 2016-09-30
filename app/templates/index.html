@@ -45,7 +45,6 @@
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">Item2Vec</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -55,7 +54,7 @@
                     <li>
                         <a class="page-scroll" href="#services">How does it work?</a>
                     </li>
-                                        <li>
+                    <li>
                         <a class="page-scroll" href="#Performance">Performance</a>
                     </li>
                     <li>
@@ -78,232 +77,218 @@
         <div class="header-content">
             <div class="header-content-inner">
                 <h1 id="homeHeading">Item2Vec  Movie  recommender</h1>
-                <hr>
+                <hr class="primary">
                 <h3 class="section-heading">Collaborative Filtering + Word2Vec
                 </br>
-                </br> Scalable + Need To Be Trained Very Infrequently
+                </br> Scalable
                 </br>
                 </br> Better Performace
                 </h3>
                 <p class="text-center">
-                </br>
+                  </br>
+                  <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
                 </p>
-
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
     </header>
 
     <section class="bg-primary" id="about">
-
-
-
-      <!-- <div class="container-fluid">
+      <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Motivation
+          </h2>
+          <hr class = "light">
+      </div>
+      <div class="container", style="margin-top:32px">
         <div class="row">
-            <div class="col-lg-16 col-lg-offset-1 text-center">
-              <div class="row no-gutter popup-gallery">
-              <div class="col-lg-4 col-sm-6">
-                  <a href="{{     url_for('static', filename ="img/Word2Vec/StarTrek.jpg")}}" class="portfolio-box">
-                      <img src="{{     url_for('static', filename ="img/Word2Vec/StarTrek.jpg")}}" class="img-responsive" alt="">
-                      <div class="portfolio-box-caption" "text-center">
-                      </div>
-                  </a>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                  <a href="{{     url_for('static', filename ="img/Word2Vec/BackToTheFuture.jpg")}}" class="portfolio-box">
-                      <img src="{{     url_for('static', filename ="img/Word2Vec/BackToTheFuture.jpg")}}" class="img-responsive" alt="">
-                      <div class="portfolio-box-caption">
-                      </div>
-                  </a>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                  <a href="{{     url_for('static', filename ="img/Word2Vec/Exorcist.jpg")}}" class="portfolio-box">
-                      <img src="{{     url_for('static', filename ="img/Word2Vec/Exorcist.jpg")}}" class="img-responsive" alt="">
-                      <div class="portfolio-box-caption">
-                      </div>
-                  </a>
-              </div>
-            </div>
+          <div class="col-lg-20 col-lg-offset-0 text-center">
+            <hr class="light">
+            <p class="text-faded"> Many Collaborative Filtering (CF) algorithms are item-based in the sense that they analyze item-item relations in order to produce item similarities.
+                                  </br>Recently, several works in the field of Natural Language Processing suggested to learn a latent representation of words using neural embedding algorithms.
+                                  </br>Among them, Word2Vec was shown to provide state-of-the-art results on various linguistics tasks.
+                                  </br></br>Item-based CF can be cast in the same framework of neural word embedding.
+                                  </br>Inspired by Word2Vec, Item2Vec is item-based CF that produces embedding for items in a latent space.
+                                  </br>The method is capable of inferring item-to-item relations even when user information is not available.</br></p>
+            <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">How does it work?</a>
           </div>
         </div>
-      </div> -->
-
-        <div class="container", style="margin-top:64px">
-            <div class="row">
-                <div class="col-lg-20 col-lg-offset-0 text-center">
-                    <hr class="light">
-                    <p class="text-faded">Wor2Vec represents a word as a vector,
-
-                    </br>Item2Vec represents a item as a vector
-                  </p>
-                    <!-- <p class="text-faded"> Many Collaborative Filtering (CF) algorithms are item-based in the sense that they analyze item-item relations in order to produce item similarities.
-                                          </br>Recently, several works in the field of Natural Language Processing suggested to learn a latent representation of words using neural embedding algorithms.
-                                          </br>Among them, the Skip-gram with Negative Sampling (SGNS), also known as Word2Vec, was shown to provide state-of-the-art results on various linguistics tasks.
-                                          </br>In this web application, I show that item-based CF can be cast in the same framework of neural word embedding.
-                                          </br>Inspired by SGNS, we describe a method we name Item2Vec for item-based CF that produces embedding for items in a latent space.
-                                          </br>The method is capable of inferring item-to-item relations even when user information is not available.
-                                          </br>We present experimental results on large scale datasets that demonstrate the Item2Vec method.</p>
-                    <p> -->
-                    <a href="{{     url_for('static', filename ="img/Word2Vec/compare1.png")}}" class="portfolio-box">
-                      <img src="{{     url_for('static', filename ="img/Word2Vec/compare1.png")}}" class="img-responsive" alt="">
-                    </a>
-                    <p>
-                      </br>
-                    </p>
-                    <p class="text-faded">
-                    </br> Vector "King" + Vector "Woman" - Vector "Man" = Vector "Queen"
-                    </br> Vector "Star Trek" + Vector "Back To The Future" - Vector "Exorcist" = ?
-                    </p>
-                    <a href="{{     url_for('static', filename ="img/Word2Vec/compare2.png")}}" class="portfolio-box">
-                      <img src="{{     url_for('static', filename ="img/Word2Vec/compare2.png")}}" class="img-responsive" alt="">
-                    </a>
-                    <p class="text-faded">
-                      </br>
-                      </br>
-                      </br>
-                    </p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">How does it work?</a>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
-
-
     <section id="services">
         <div class="container">
           <div class="col-lg-12 text-center">
               <h2 class="section-heading">How Does It Work?</h2>
               <hr class = "primary">
+              <p>Wor2Vec represents "a word" as a vector,
+              </br>Item2Vec represents "a item" as a vector
+              </p>
           </div>
             <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-group text-primary sr-icons"></i>
-                        <h3>Collaborative Filtering</h3>
-                        <p class="text-muted">Only needs user's past behaviors</p>
-                    </div>
+              <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                  <i class="fa fa-4x fa-group text-primary sr-icons"></i>
+                  <h3>Collaborative Filtering</h3>
+                  <p class="text-muted">Only needs user's past behaviors</p>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-language text-primary sr-icons"></i>
-                        <h3>Origins from Word2Vec</h3>
-                        <p class="text-muted">Based on the well-known technique, Word2Vec</p>
-                    </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                  <i class="fa fa-4x fa-language text-primary sr-icons"></i>
+                  <h3>Origins from Word2Vec</h3>
+                  <p class="text-muted">Based on the well-known technique, Word2Vec</p>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-bolt text-primary sr-icons"></i>
-                        <h3>A little tweak</h3>
-                        <p class="text-muted">One can easily imagine the items in basket as the words in a sentence</p>
-                    </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                  <i class="fa fa-4x fa-bolt text-primary sr-icons"></i>
+                  <h3>A little tweak</h3>
+                  <p class="text-muted">One can easily imagine the items in basket as the words in a sentence</p>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-close text-primary sr-icons"></i>
-                        <h3>Does not have to recompute</h3>
-                        <p class="text-muted">When the new user come.
-                        </p>
-                    </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                  <i class="fa fa-4x fa-close text-primary sr-icons"></i>
+                  <h3>Does not have recalculate</h3>
+                  <p class="text-muted">When the new user come.</p>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-thumbs-o-up text-primary sr-icons"></i>
-                        <h3>Competitive!</h3>
-                        <p class="text-muted">Competitive with matrix factorization recommenders</p>
-                    </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                  <i class="fa fa-4x fa-thumbs-o-up text-primary sr-icons"></i>
+                  <h3>Competitive!</h3>
+                  <p class="text-muted">Competitive with matrix factorization recommenders</p>
                 </div>
-
-
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-balance-scale text-primary sr-icons"></i>
-                        <h3>Evaluation metric</h3>
-                        <p class="text-muted">Mesare performance based on Recall@M</p>
-                    </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                  <i class="fa fa-4x fa-balance-scale text-primary sr-icons"></i>
+                  <h3>Evaluation metric</h3>
+                  <p class="text-muted">Mesare performance based on Recall@M</p>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-plus text-primary sr-icons"></i>
-                        <h3> Dataset I used, MovieLens latest </h3>
-                        <p class="text-muted">Full and latest dataset
-                    </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                  <i class="fa fa-4x fa-database text-primary sr-icons"></i>
+                  <h3> Dataset I used, MovieLens latest </h3>
+                  <p class="text-muted">Full and latest dataset
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-calendar text-primary sr-icons"></i>
-                        <h3>What will the user watch NEXT?</h3>
-                        <p class="text-muted">Training/validation set per user using "timestamp data"</p>
-                    </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                  <i class="fa fa-4x fa-calendar text-primary sr-icons"></i>
+                  <h3>What will the user watch NEXT?</h3>
+                  <p class="text-muted">Training/validation set per user in realistic manner</p>
                 </div>
+              </div>
             </div>
         </div>
     </section>
-
-
     <section class="no-padding">
       <div class="container">
           <div class="row">
-              <!-- <div class="col-lg-12 col-lg-offset-0 text-center">
+              <div class="col-lg-12 col-lg-offset-0 text-center">
                 <div class="service-box">
                     <i class="fa fa-4x fa-group text-primary sr-icons"></i>
                     <h3>Collaborative Filtering</h3>
                 </div>
-                  <a href="{{     url_for('static', filename ="img/CF/CFitembased.png")}}" class="portfolio-box">
-                    <img src="{{     url_for('static', filename ="img/CF/CFitembased.png")}}" class="img-responsive" alt="">
-                  </a>
-                  <p class="text-center"> * figures from
-                    <a href="https://johnolamendy.wordpress.com/2015/10/14/collaborative-filtering-in-apache-spark/">JC Olamendy's thought</a>
-                  </p>
-                  <p class="text-center"> Collaborative filtering v.s. content-based filtering
-                  </br> Basically, Item2Vec uses item-item collaborative filtering.
-                    Item-item based collaborative filtering is based on the similarity
-                    between items calculated using people's ratings of those items.
-                  </p>
-              </div> -->
-
-              <!-- <div class="col-lg-12 col-lg-offset-0 text-center", style="margin-top:64px">
+                <a href="{{     url_for('static', filename ="img/CF/CFitembased.png")}}" class="portfolio-box">
+                  <img src="{{     url_for('static', filename ="img/CF/CFitembased.png")}}" class="img-responsive" alt="">
+                </a>
+                <p class="text-center"> ( * figures from
+                  <a href="https://johnolamendy.wordpress.com/2015/10/14/collaborative-filtering-in-apache-spark/">JC Olamendy's thought</a> )
+                </p>
+                <p class="text-center">Basically, Item2Vec uses item-item collaborative filtering.
+                  </br>Item-item based collaborative filtering is based on the similarity
+                  between items calculated using people's ratings of those items.
+                </p>
+              </div>
+              <div class="col-lg-12 col-lg-offset-0 text-center", style="margin-top:64px">
                   <div class="service-box">
                       <i class="fa fa-4x fa-language text-primary sr-icons"></i>
                       <h3>Origins from Word2Vec</h3>
                   </div>
-                  <a href="{{     url_for('static', filename ="img/Word2Vec/word2vec-king-queen-composition.png")}}" class="portfolio-box">
-                    <img src="{{     url_for('static', filename ="img/Word2Vec/word2vec-king-queen-composition.png")}}" class="img-responsive" alt="">
-                  </a>
-                  <p class="text-center"> * figures from
-                  <a href="https://blog.acolyer.org/2016/04/21/the-amazing-power-of-word-vectors/">The morning paper</a>
-                  </br>Word2Vec is a group of similar models.
-                  </br>It contains two different techniques,
-                    namely skip-gram and CBOW, which produce word embeddings,
-                    i.e. distributed word representations.
-                  </br>The word embeddings represent the words in a low dimensional
-                    continuous space and carry the semantic and syntactic information of words.
+                  <p> Word2Vec is a group of similar models.
+                    </br>It contains two different techniques,
+                      namely skip-gram and CBOW, which produce word embeddings.
+                    </br>The word embeddings represent the words in a low dimensional
+                      continuous space and carry the semantic and syntactic information of words.
                   </p>
-              </div> -->
-
-              <!-- <div class="col-lg-12 col-lg-offset-0 text-center", style="margin-top:64px">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-lg-10 col-lg-offset-1 text-center">
+                        <div class="row no-gutter popup-gallery">
+                          <div class="col-lg-4 col-sm-6">
+                                <a href="{{     url_for('static', filename ="img/Word2Vec/StarTrek.jpg")}}" class="portfolio-box">
+                                    <img src="{{     url_for('static', filename ="img/Word2Vec/StarTrek.jpg")}}" class="img-responsive" alt="">
+                                    <div class="portfolio-box-caption" "text-center">
+                                      <div class="portfolio-box-caption-content">
+                                          <div class="project-name">
+                                            Movie 1: StarTrek
+                                          </div>
+                                      </div>
+                                    </div>
+                                </a>
+                            </div>
+                          <div class="col-lg-4 col-sm-6">
+                              <a href="{{     url_for('static', filename ="img/Word2Vec/BackToTheFuture.jpg")}}" class="portfolio-box">
+                                  <img src="{{     url_for('static', filename ="img/Word2Vec/BackToTheFuture.jpg")}}" class="img-responsive" alt="">
+                                  <div class="portfolio-box-caption" "text-center">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-name">
+                                          Movie 2: Back to the future
+                                        </div>
+                                    </div>
+                                  </div>
+                              </a>
+                          </div>
+                          <div class="col-lg-4 col-sm-6">
+                              <a href="{{     url_for('static', filename ="img/Word2Vec/Exorcist.jpg")}}" class="portfolio-box">
+                                  <img src="{{     url_for('static', filename ="img/Word2Vec/Exorcist.jpg")}}" class="img-responsive" alt="">
+                                  <div class="portfolio-box-caption" "text-center">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-name">
+                                          Movie 3: Exorcist
+                                        </div>
+                                    </div>
+                                  </div>
+                              </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="margin-top:64px">
+                    <a href="{{     url_for('static', filename ="img/Word2Vec/compare1.png")}}" class="portfolio-box">
+                      <img src="{{     url_for('static', filename ="img/Word2Vec/compare1.png")}}" class="img-responsive" alt="">
+                    </a>
+                  </div>
+              </div>
+              <div class="col-lg-12 col-lg-offset-0 text-center", style="margin-top:64px">
                   <div class="service-box">
                       <i class="fa fa-4x fa-bolt text-primary sr-icons"></i>
                       <h3>A little tweak</h3>
                   </div>
+                  <p> Vector "King" + Vector "Woman" - Vector "Man" = Vector "Queen"
+                    </br> Vector "Star Trek" + Vector "Back To The Future" - Vector "Exorcist" = ?
+                  </p>
+                  <a href="{{     url_for('static', filename ="img/Word2Vec/compare2.png")}}" class="portfolio-box">
+                    <img src="{{     url_for('static', filename ="img/Word2Vec/compare2.png")}}" class="img-responsive" alt="">
+                  </a>
                   <p class="text-center">
-                      </br> **figure (little tweak1)
                       </br> As shown above, we can think the items in the basket as the words in the sentence.
-                      </br> **figure (little tweak2))
                       </br> Instead of predicting most similar words, Item2Vec predicts most similar items.
                   </p>
-              </div> -->
-
+              </div>
               <div class="col-lg-12 col-lg-offset-0 text-center", style="margin-top:64px">
                   <div class="service-box">
                       <i class="fa fa-4x fa-thumbs-o-up text-primary sr-icons"></i>
                       <h3>Competitive!</h3>
                   </div>
-                      <p class="text-center">
-                        Item2Vec is competitive with matrix factorization recommender system.
-                      </br> Item2Vec shows higher average performance and lower variance.
-                      </p>
+                    <p class="text-center">
+                      Item2Vec is competitive with matrix factorization recommender system.
+                    </br> Item2Vec shows higher average performance and lower variance.
+                    </br> See the performance evaluation
+                    </p>
               </div>
-
               <div class="col-lg-12 col-lg-offset-0 text-center", style="margin-top:64px">
                 <div class="service-box">
                     <i class="fa fa-4x fa-balance-scale text-primary sr-icons"></i>
@@ -312,12 +297,8 @@
                   <p class="text-center">
                     </br> Recommendation is viewed as information retrieval task:
                     </br> Retrieve all items which are predicted to be “good”.
-                    <!-- </br> Equation(precision) :
-                       A measure of exactness, determines the fraction of relevant items retrieved out of all items retrieved.
-                    </br> Equation(recall at M) :
-                       A measure of completeness, determines the fraction of relevant items retrieved out of all relevant items. -->
                   </p>
-                  <div class="row no-gutter popup-gallery", style="margin-bottom:32px">
+                  <div class="row no-gutter popup-gallery">
                   <table class="table table-hover">
                     <thead>
                       <tr>
@@ -339,10 +320,9 @@
                     <img src="{{     url_for('static', filename ="img/Performance/recall.png")}}" class="img-responsive" alt="">
                   </a>
               </div>
-
               <div class="col-lg-12 col-lg-offset-0 text-center", style="margin-top:64px">
                 <div class="service-box">
-                    <i class="fa fa-4x fa-plus text-primary sr-icons"></i>
+                    <i class="fa fa-4x fa-database text-primary sr-icons"></i>
                     <h3> Dataset I used, MovieLens latest </h3>
                     <p> January 09, 1995 ~ January 29, 2016.</p>
                 </div>
@@ -351,11 +331,13 @@
                         <img src="{{     url_for('static', filename ="img/How/numbers.png")}}" class="img-responsive" alt="">
                       </a>
                     </p>
+                    <p>
+                      </br>
+                      </br>
+                      </br>
+                    </p>
               </div>
-
-
-
-              <div class="col-lg-20 col-lg-offset-0 text-center", style="margin-top:128px">
+              <div class="col-lg-20 col-lg-offset-0 text-center", style="margin-top:64px">
                 <div class="service-box">
                     <i class="fa fa-4x fa-calendar text-primary sr-icons"></i>
                     <h3> Each user has own test set </h3>
@@ -368,112 +350,9 @@
                       </a>
                     </p>
               </div>
-<!--
-              <div class="col-lg-12 col-lg-offset-0 text-center", style="margin-top:64px">
-                  <div class="service-box">
-                      <i class="fa fa-4x fa-close text-primary sr-icons"></i>
-                      <h3>Does not have to recompute</h3>
-                 </div>
-                      <p class="text-center">
-                        When new user come.
-                      </br> Item2Vec can handle with new user if the new user specifies one or two liked items and disliked items
-                      </p>
-              </div> -->
-
-
           </div>
       </div>
     </section>
-
-    <!-- <section class="no-padding" id="portfolio" >
-        <div class="container", style="margin-top:128px">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Cases</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-            <p class="text-muted"> Jackson, How do you choose specific users for examples?
-            </br> Only counts the ratings in the training set</p>
-        </div>
-        <div class="col-lg-8 col-lg-offset-2 container">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th class="text-center">User ID</th>
-                <th class="text-center">Number of ratings in the training set</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="text-center">185430</td>
-                <td class="text-center">7136</td>
-              </tr>
-              <tr>
-                <td class="text-center">204165</td>
-                <td class="text-center">6850</td>
-              </tr>
-              <tr>
-                <td class="text-center">46750</td>
-                <td class="text-center">5260</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="{{     url_for('static', filename ="img/portfolio/fullsize/1.jpg")}}" class="portfolio-box">
-                        <img src="{{     url_for('static', filename ="img/portfolio/thumbnails/1.jpg")}}" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    User ID
-                                </div>
-                                <div class="project-name">
-                                    185430
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="{{     url_for('static', filename ="img/portfolio/fullsize/2.jpg")}}" class="portfolio-box">
-                        <img src="{{     url_for('static', filename ="img/portfolio/thumbnails/2.jpg")}}" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    User ID
-                                </div>
-                                <div class="project-name">
-                                    405
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="{{     url_for('static', filename ="img/portfolio/fullsize/3.jpg")}}" class="portfolio-box">
-                        <img src="{{     url_for('static', filename ="img/portfolio/thumbnails/3.jpg")}}" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    User ID
-                                </div>
-                                <div class="project-name">
-                                    655
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-
     <section class="bg-primary" id="Performance">
       <div class="container">
           <div class="row">
@@ -501,7 +380,6 @@
                 <a href="{{     url_for('static', filename ="img/Performance/Std_SVD_I2V_CBOW_HS.png")}}" class="portfolio-box", style="margin-bottom:32px">
                   <img src="{{     url_for('static', filename ="img/Performance/Std_SVD_I2V_CBOW_HS.png")}}" class="img-fluid center-block" alt="" style="min-height:272px;height:272px;" >
                 </a>
-
               </td>
             </tr>
           </thead>
@@ -541,7 +419,6 @@
         </br>
         </p>
       </div>
-
       <div class="container-fluid", style="margin-top:32px">
           <div class="row no-gutter popup-gallery">
               <div class="col-lg-4 col-sm-6">
@@ -582,123 +459,11 @@
                     </div>
                 </a>
               </div>
-
           </div>
       </div>
-
-      <!-- <div class="container">
-          <div class="row">
-              <div class="col-lg-12 text-center">
-                    </br><p>ItemItemCF v.s. Item2Vec</p></h2>
-                  <p>1M Dataset
-                    </br>Recall @ 1000 items
-                    </br>300 Users
-                  </p>
-              </div>
-          </div>
-      </div> -->
-      <!-- <div class="container-fluid">
-          <div class="row no-gutter popup-gallery">
-              <div class="col-lg-4 col-sm-6">
-                <a href="{{     url_for('static', filename ="img/portfolio/fullsize/6.jpg")}}" class="portfolio-box">
-                    <img src="{{     url_for('static', filename ="img/portfolio/thumbnails/6.jpg")}}" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-name">
-                                ItemItemCF v.s. Item2Vec Skip-gram
-                            </div>
-                        </div>
-                    </div>
-                </a>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <a href="{{     url_for('static', filename ="img/portfolio/fullsize/6.jpg")}}" class="portfolio-box">
-                    <img src="{{     url_for('static', filename ="img/portfolio/thumbnails/6.jpg")}}" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-name">
-                                ItemItemCF v.s. Item2Vec Hierarchical Softmax
-                            </div>
-                        </div>
-                    </div>
-                </a>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <a href="{{     url_for('static', filename ="img/portfolio/fullsize/6.jpg")}}" class="portfolio-box">
-                    <img src="{{     url_for('static', filename ="img/portfolio/thumbnails/6.jpg")}}" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-name">
-                              Item2Vec Skip-gram v.s.
-                              </br>Item2Vec Hierarchical Softmax
-                            </div>
-                        </div>
-                    </div>
-                </a>
-              </div>
-
-          </div>
-      </div> -->
-
-
-      <!-- <div class="container">
-          <div class="row">
-              <div class="col-lg-12 text-center">
-                    </br><p>SVD v.s. Item2Vec</p></h2>
-                  <p>1M Dataset
-                  </br>Recall @ 1000 items
-                </br>300 Users</p>
-              </div>
-          </div>
-      </div> -->
-      <!-- <div class="container-fluid">
-          <div class="row no-gutter popup-gallery">
-              <div class="col-lg-4 col-sm-6">
-                <a href="{{     url_for('static', filename ="img/portfolio/fullsize/6.jpg")}}" class="portfolio-box">
-                    <img src="{{     url_for('static', filename ="img/portfolio/thumbnails/6.jpg")}}" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-name">
-                                SVD v.s. Item2Vec Skip-gram
-                            </div>
-                        </div>
-                    </div>
-                </a>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <a href="{{     url_for('static', filename ="img/portfolio/fullsize/6.jpg")}}" class="portfolio-box">
-                    <img src="{{     url_for('static', filename ="img/portfolio/thumbnails/6.jpg")}}" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-name">
-                                SVD v.s. Item2Vec Hierarchical Softmax
-                            </div>
-                        </div>
-                    </div>
-                </a>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <a href="{{     url_for('static', filename ="img/portfolio/fullsize/6.jpg")}}" class="portfolio-box">
-                    <img src="{{     url_for('static', filename ="img/portfolio/thumbnails/6.jpg")}}" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-name">
-                              Item2Vec Skip-gram v.s.
-                              </br>Item2Vec Hierarchical Softmax
-                            </div>
-                        </div>
-                    </div>
-                </a>
-              </div>
-
-          </div>
-      </div> -->
     </section>
-
     <section class="bg-dark" id="submit">
-        <div class="container text-center">
+        <div class="container text-center", style="margin-top:64px">
             <div class="call-to-action">
                 <h2>Live Demo! </h2>
                 <hr class = 'primary'>
@@ -709,8 +474,8 @@
                 </form>
             </div>
         </div>
+        <div class="container", style="margin-top:64px"></div>
     </section>
-
     <section class="bg-primary" id="futures">
         <div class="container">
             <div class="row">
@@ -743,7 +508,6 @@
             </div> -->
         </div>
     </section>
-
     <section id="contact">
         <div class="container">
             <div class="row">
@@ -754,10 +518,8 @@
                       </br>
                     </p>
                 </div>
-
-
-
-                <!-- <div class="col-lg-4 col-lg-offset-2 text-center">
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                  <!-- Item2Vec: Neural Item Embedding for Collaborative Filtering -->
                     <p>
                       <a href="{{     url_for('static', filename ="img/Thanksto/Item2Vec_img.png")}}" class="portfolio-box">
                           <img src="{{     url_for('static', filename ="img/Thanksto/Item2Vec_img.png")}}" class="img-responsive" alt="">
@@ -765,6 +527,7 @@
                     </p>
                 </div>
                 <div class="col-lg-4 text-center">
+                  <!-- Gensim: Topic modelling for humans - Radim Řehůřek -->
                   <p>
                     <a href="{{     url_for('static', filename ="img/Thanksto/Gensim_img.jpg")}}" class="portfolio-box">
                         <img src="{{     url_for('static', filename ="img/Thanksto/Gensim_img.jpg")}}" class="img-responsive" alt="">
@@ -792,61 +555,9 @@
                     </a>
                   </p>
                 </div>
-
                 <div class="col-lg-4 text-center">
+                  <!-- Galvanize -->
                   <p>
-                    <a href="{{     url_for('static', filename ="img/Thanksto/Galvanize-Galvanize-logomark-text-only-2-2.png")}}" class="portfolio-box">
-                        <img src="{{     url_for('static', filename ="img/Thanksto/Galvanize-Galvanize-logomark-text-only-2-2.png")}}" class="img-responsive" alt="">
-                    </a>
-                  </p>
-                </div> -->
-
-
-
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <p>
-                      <!-- Item2Vec: Neural Item Embedding for Collaborative Filtering -->
-                      <a href="{{     url_for('static', filename ="img/Thanksto/Item2Vec_img.png")}}" class="portfolio-box">
-                          <img src="{{     url_for('static', filename ="img/Thanksto/Item2Vec_img.png")}}" class="img-responsive" alt="">
-                      </a>
-                    </p>
-                </div>
-                <div class="col-lg-4 col-sm-6text-center">
-                  <p>
-                    <!-- Gensim: Topic modelling for humans - Radim Řehůřek -->
-                    <a href="{{     url_for('static', filename ="img/Thanksto/Gensim_img.jpg")}}" class="portfolio-box">
-                        <img src="{{     url_for('static', filename ="img/Thanksto/Gensim_img.jpg")}}" class="img-responsive" alt="">
-                    </a>
-                  </p>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <p>
-                      <!-- Flask -->
-                      <a href="{{     url_for('static', filename ="img/Thanksto/flask_img.png")}}" class="portfolio-box">
-                          <img src="{{     url_for('static', filename ="img/Thanksto/flask_img.png")}}" class="img-responsive" alt="">
-                      </a>
-                    </p>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                  <p>
-                    <!-- Galvanize -->
-                    <a href="{{     url_for('static', filename ="img/Thanksto/bootstrap2.png")}}" class="portfolio-box">
-                        <img src="{{     url_for('static', filename ="img/Thanksto/bootstrap2.png")}}" class="img-responsive" alt="">
-                    </a>
-                  </p>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                  <p>
-                    <!-- Galvanize -->
-                    <a href="{{     url_for('static', filename ="img/Thanksto/bs2.png")}}" class="portfolio-box">
-                        <img src="{{     url_for('static', filename ="img/Thanksto/bs2.png")}}" class="img-responsive" alt="">
-                    </a>
-                  </p>
-                </div>
-
-                <div class="col-lg-4 col-sm-6 text-center">
-                  <p>
-                    <!-- Galvanize -->
                     <a href="{{     url_for('static', filename ="img/Thanksto/Galvanize-Galvanize-logomark-text-only-2-2.png")}}" class="portfolio-box">
                         <img src="{{     url_for('static', filename ="img/Thanksto/Galvanize-Galvanize-logomark-text-only-2-2.png")}}" class="img-responsive" alt="">
                     </a>
@@ -854,7 +565,6 @@
                 </div>
             </div>
         </div>
-
         <div class="container", style="margin-top:128px">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -869,15 +579,14 @@
                     <i class="fa fa-envelope-o fa-3x sr-contact"></i>
                     <p><a href="{{     url_for('static', filename ="mailto:your-email@your-domain.com")}}">dootaa00@gmail.com</a></p>
                 </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <!-- <i class="fa fa-phone fa-3x sr-contact"></i> -->
-                    <a href="https://www.linkedin.com/in/doosan-jackson-jung" class=class="btn btn-default btn-xl sr-button">LinkedIn</a>
+                <div class="col-lg-4 col-lg-offset-2 text-center", style="margin-top:16px">
+                    <i class="fa fa-linkedin fa-3x sr-contact"></i>
+                    <p><a href="https://www.linkedin.com/in/doosan-jackson-jung" class=class="btn btn-default btn-xl sr-button">LinkedIn</a></p>
                 </div>
-                <div class="col-lg-4 text-center">
-                    <!-- <i class="fa fa-envelope-o fa-3x sr-contact"></i> -->
-                    <a href="https://github.com/doosanjung/I2V_project" class=class="btn btn-default btn-xl sr-button">GitHub</a>
+                <div class="col-lg-4 text-center", style="margin-top:16px">
+                    <i class="fa fa-github fa-3x sr-contact"></i>
+                    <p><a href="https://github.com/doosanjung/I2V_project" class=class="btn btn-default btn-xl sr-button">GitHub</a></p>
                 </div>
-
             </div>
         </div>
     </section>

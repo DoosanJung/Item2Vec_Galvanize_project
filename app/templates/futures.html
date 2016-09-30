@@ -73,27 +73,26 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-
     <section class="bg-primary" id="futures">
-        <div class="container">
+        <div class="container", style="margin-top:64px">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Challenges and Future improvements</h2>
-                    <!-- <hr class="light">
+                    <hr class="light">
                     <p> Improving Item2Vec via hyperparameter tuning</p>
                     <p> Comparing with other advanced models</p>
                     <p> Online learning</p>
-                    <p> Incorporate with item review data using Natural Language Processing</p> -->
+                    <p> Incorporate with item review data using Natural Language Processing</p>
+                    <p> Not just movie recommendations</p>
                 </div>
             </div>
         </div>
     </section>
-
     <section class="no-padding">
       <div class="container">
           <div class="row">
               <div class="col-lg-12 col-lg-offset-0 text-center", style="margin-top:64px">
-                    <h2>Improving Item2Vec via hyperparameter tuning</h2>
+                    <h2>1. Improving Item2Vec via hyperparameter tuning</h2>
                   <p class="text-center">
                   </br> As mentioned before, Word2Vec is a group of models which are CBOW, Skip-Gram and Hierarchical softmax.
                   </br> And each model has a lot of parameters to tune.
@@ -102,7 +101,7 @@
               </div>
 
               <div class="col-lg-12 col-lg-offset-0 text-center", style="margin-top:64px">
-                  <h2>Comparison of other advanced models for the same dataset</h2>
+                  <h2>2. Comparison of other advanced models for the same dataset</h2>
                   <p class="text-center">
                   </br> Many models uses same dataset to build the recommender system. (e.g. SVD++, regularized SVD ..)
                     </br> To be more practical, Item2Vec should be improved to be the one of those advanced recommender.
@@ -110,7 +109,7 @@
               </div>
 
               <div class="col-lg-12 col-lg-offset-0 text-center", style="margin-top:64px">
-                    <h2>Online learning</h2>
+                    <h2>3. Online learning</h2>
                   <p class="text-center">
                   </br> Even though, there are few need to recompute time to time, It is not a online learning model.
                   </br>
@@ -118,7 +117,7 @@
               </div>
 
               <div class="col-lg-12 col-lg-offset-0 text-center", style="margin-top:64px">
-                      <h2> Incorporate with item review data using Natural Language Processing</h2>
+                      <h2>4. Incorporate with item review data using Natural Language Processing</h2>
                       <p class="text-center">
                       </br> Movielens dataset provides the tag data and data to link with IMDB dataset.
                       </br> Hybrid recommender system using Collaborative Filtering and Natural Language processing will improve the recommender.
@@ -126,24 +125,13 @@
               </div>
 
               <div class="col-lg-12 col-lg-offset-0 text-center", style="margin-top:64px">
-                      <h2> Not just movie recommendations</h2>
+                      <h2>5. Not just movie recommendations</h2>
                       <p class="text-center">
                       </br> Item2Vec can be used other domains as well, as long as there are people and ratings.
                       </p>
               </div>
-
-
-
-              <!-- <div class="col-lg-8 col-lg-offset-2 text-center">
-                <div class="service-box">
-                    <h3>Heavy Users v.s. Light Users</h3>
-                </div>
-                  <p class="text-center">
-                  </br> ** figure **
-                </br> It was hard to make recommendation to heavy users because Item2Vec recommends most similar items to the liked items.
-                </br> And the heavy user most likely have seen those items.
-                  </p>
-              </div> -->
+              <div class="col-lg-8 col-lg-offset-2 text-center", style="margin-top:64px">
+              </div>
           </div>
       </div>
     </section>
