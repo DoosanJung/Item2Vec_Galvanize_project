@@ -1,4 +1,5 @@
 # ...Under construction...
+### Will update to have better readability
 
 # Item2Vec Project
 A recommender system based on word2vec
