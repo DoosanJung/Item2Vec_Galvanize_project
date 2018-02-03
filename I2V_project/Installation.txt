@@ -1,0 +1,3 @@
+# installation
+easy_install --upgrade gensim
+
