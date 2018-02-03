@@ -1,5 +1,6 @@
 # ...Under construction...
-### Will update to have better readability
+> Will update to have better readability.
+> To check the development process, look for the directory 'I2V_project' inside this repo 
 
 # Item2Vec Project
 A recommender system based on word2vec
