@@ -6,18 +6,18 @@ import os
 
 class I2VConfig(object):
     '''
-        I2V configuration class
+    I2V configuration class
     '''
     HOME_PATH = os.path.expanduser('~/projects/I2V_project')
 
     FILE_PATH = {
         'test' : {
-                    "ratings_testdata" : "I2V_project/data/u.data",
-                    "movies_testdata"  : "I2V_project/data/u.item",
+                    "ratings_testdata" : "/I2V_project/data/u.data",
+                    "items_testdata"  : "/I2V_project/data/u.item",
         },
         'dev' : {
-                    "ratings"          : "I2V_project/data/ratings.csv",
-                    "movies"           : "I2V_project/data/movies.csv"
+                    "ratings"          : "/I2V_project/data/ratings.csv",
+                    "items"           : "/I2V_project/data/movies.csv"
         }
     }
 
@@ -29,7 +29,7 @@ class I2VConfig(object):
                             "timestamp"
                             ],
 
-        'movies_columns' : [ 'movieId', \
+        'items_columns' : [ 'movieId', \
                             'movie_title', \
                             'release_date', \
                             'video_release_date', \
@@ -56,6 +56,8 @@ class I2VConfig(object):
                             ]
     }
 
+    PLOT = True
+
     @staticmethod
     def get_config():
         '''
@@ -64,5 +66,5 @@ class I2VConfig(object):
         return {
             'HOME_PATH' : I2VConfig.HOME_PATH,
             'FILE_PATH' : I2VConfig.FILE_PATH['test'],
-            'COLUMNS'   :  I2VConfig.COLUMNS             
+            'COLUMNS'   :  I2VConfig.COLUMNS
         }
