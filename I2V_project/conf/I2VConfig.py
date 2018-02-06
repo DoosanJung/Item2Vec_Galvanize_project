@@ -2,11 +2,24 @@
 '''
 
 '''
+import os
 
 class I2VConfig(object):
     '''
         I2V configuration class
     '''
+    HOME_PATH = os.path.expanduser('~/projects/I2V_project')
+
+    FILE_PATH = {
+        'test' : {
+                    "ratings_testdata" : "I2V_project/data/u.data",
+                    "movies_testdata"  : "I2V_project/data/u.item",
+        },
+        'dev' : {
+                    "ratings"          : "I2V_project/data/ratings.csv",
+                    "movies"           : "I2V_project/data/movies.csv"
+        }
+    }
 
     COLUMNS = {
         # rating Matrix
@@ -42,3 +55,14 @@ class I2VConfig(object):
                             'Western'
                             ]
     }
+
+    @staticmethod
+    def get_config():
+        '''
+            get configuration test or dev
+        '''
+        return {
+            'HOME_PATH' : I2VConfig.HOME_PATH,
+            'FILE_PATH' : I2VConfig.FILE_PATH['test'],
+            'COLUMNS'   :  I2VConfig.COLUMNS             
+        }
