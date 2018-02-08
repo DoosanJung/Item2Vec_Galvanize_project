@@ -17,15 +17,14 @@ logger = logging.getLogger()
 
 class DataPrep(object):
     '''
-        import data and split train/test data
+    Import data and split train/test data per user
+    Each user will have own train/test data
     '''
-
-    def __init__(self, split_ratio):
+    def __init__(self):
         self.home_path = I2VConfig.HOME_PATH
         self.file_path = I2VConfig.get_config()['FILE_PATH']
         self.columns = I2VConfig.COLUMNS
         self.plot = I2VConfig.PLOT
-        self.split_ratio = split_ratio # e.g. 70
 
     def get_ratings(self):
         '''
@@ -35,6 +34,15 @@ class DataPrep(object):
         try:
             ratings = pd.read_table(self.home_path + self.file_path['ratings_testdata'],
                                              names = self.columns['ratings_columns'])
+            # check missing userId or movieId
+            if len(ratings.userId.unique()) != ratings.userId.max():
+                logger.error('missing userID')
+                raise
+
+            if len(ratings.movieId.unique()) != ratings.movieId.max():
+                logger.error('missing movieId')
+                raise
+
             self.highest_user_id = ratings.userId.max()
             self.highest_movie_id = ratings.movieId.max()
             logger.info('Succeed in getting ratings data')
@@ -61,11 +69,12 @@ class DataPrep(object):
             logger.error('Failed to get movie data')
             raise
 
-    def show_ratio_dist(self):
+    def show_ratio_dist(self, split_ratio):
         '''
         show the distribution of train/test split ratios
         '''
         ratings = self.get_ratings()
+        self.split_ratio = split_ratio # e.g. 70
 
         logger.info('Trying to visualize the distribution of train/test split ratios..')
         try:
@@ -115,11 +124,12 @@ class DataPrep(object):
             logger.error('Failed to visualize the distribution of train/test split ratios')
             raise
 
-    def train_test_split(self):
+    def train_test_split(self, split_ratio):
         '''
         get train/test split
         '''
         ratings = self.get_ratings()
+        self.split_ratio = split_ratio # e.g. 70
 
         logger.info('Trying to split train/test datasets..')
         try:
@@ -159,3 +169,10 @@ class DataPrep(object):
             logger.error('Failed to split train/test datasets')
             raise
         return train_df, test_df
+
+    def get_matrix_size(self):
+        '''
+        get data matrix size
+        '''
+        ratings = self.get_ratings()
+        return self.highest_user_id, self.highest_movie_id
