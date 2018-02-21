@@ -16,9 +16,9 @@ class DataPrepTestCase(unittest.TestCase):
     '''
     Data preparation uniittest
     '''
-    def test_return_data_prep(self):
+    def test_data_prep(self):
         '''
-        test to fetch return data
+        test to fetch ratings, items and to split train/test data
         '''
         result = False
 
