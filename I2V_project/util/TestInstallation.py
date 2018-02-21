@@ -5,6 +5,9 @@ import unittest
 import logging
 from logging import config
 
+config.fileConfig("I2V_project/conf/I2V.cfg")
+logger = logging.getLogger()
+
 class ModuleImportTestCase(unittest.TestCase):
 	def test_gensim(self):
 		result = False

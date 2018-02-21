@@ -71,10 +71,10 @@ class DataPrep(object):
 
     def show_ratio_dist(self, split_ratio):
         '''
-        show the distribution of train/test split ratios
+        show the distribution of train/test split ratios of each user
         '''
         ratings = self.get_ratings()
-        self.split_ratio = split_ratio # e.g. 70
+        self.split_ratio = self._split_ratio(split_ratio=split_ratio)
 
         logger.info('Trying to visualize the distribution of train/test split ratios..')
         try:
@@ -126,10 +126,10 @@ class DataPrep(object):
 
     def train_test_split(self, split_ratio):
         '''
-        get train/test split
+        get train/test split for each user
         '''
         ratings = self.get_ratings()
-        self.split_ratio = split_ratio # e.g. 70
+        self.split_ratio = self._split_ratio(split_ratio=split_ratio)
 
         logger.info('Trying to split train/test datasets..')
         try:
@@ -176,3 +176,15 @@ class DataPrep(object):
         '''
         ratings = self.get_ratings()
         return self.highest_user_id, self.highest_movie_id
+
+    def _split_ratio(self, split_ratio):
+        if split_ratio < 0:
+            # logger.error("split ratio cannot be a negative number")
+            raise ValueError("split ratio cannot be a negative number")
+        elif split_ratio >= 0 and split_ratio <= 1:
+            return split_ratio * 100
+        elif split_ratio > 1 and split_ratio <= 100:
+            return split_ratio
+        else:
+            # logger.error("0 <= split ratio <= 1")
+            raise ValueError("0 <= split ratio <= 1")
