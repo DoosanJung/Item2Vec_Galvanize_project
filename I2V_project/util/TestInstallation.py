@@ -10,14 +10,16 @@ logger = logging.getLogger()
 
 class ModuleImportTestCase(unittest.TestCase):
 	def test_gensim(self):
-		result = False
+		test_result = False
 		logger.info("try to test gensim installation...")
 		try:
 			import gensim
 			logger.info("succeed in importing gensim")
+			test_result = True
 		except:
 			logger.error("Failed to import gensim")
 			raise
+		self.assertEqual(True, test_result)
 
 if __name__=='__main__':
 	unittest.main()
