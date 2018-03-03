@@ -43,8 +43,8 @@ class DataPrep(object):
                 logger.error('missing movieId')
                 raise
 
-            self.highest_user_id = ratings.userId.max()
-            self.highest_movie_id = ratings.movieId.max()
+            self.num_user_id = len(ratings.userId.unique())
+            self.num_movie_id = len(ratings.movieId.unique())
             logger.info('Succeed in getting ratings data')
             return ratings
         except:
@@ -175,16 +175,16 @@ class DataPrep(object):
         get data matrix size
         '''
         ratings = self.get_ratings()
-        return self.highest_user_id, self.highest_movie_id
+        return self.num_user_id, self.num_movie_id
 
     def _split_ratio(self, split_ratio):
         if split_ratio < 0:
-            # logger.error("split ratio cannot be a negative number")
+            logger.error("split ratio cannot be a negative number")
             raise ValueError("split ratio cannot be a negative number")
         elif split_ratio >= 0 and split_ratio <= 1:
             return split_ratio * 100
         elif split_ratio > 1 and split_ratio <= 100:
             return split_ratio
         else:
-            # logger.error("0 <= split ratio <= 1")
+            logger.error("0 <= split ratio <= 1")
             raise ValueError("0 <= split ratio <= 1")

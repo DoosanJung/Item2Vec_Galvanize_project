@@ -40,10 +40,11 @@ class DataPrepTestCase(unittest.TestCase):
             train_df, test_df = dp.train_test_split(split_ratio)
 
             logger.info("Trying to split train, test data")
-            dp.highest_user_id, dp.highest_movie_id = dp.get_matrix_size()
+            dp.num_user_id, dp.num_movie_id = dp.get_matrix_size()
 
             result = True
         except:
+            logger.error("Failed test - DataPrep")
             raise
 
         self.assertEqual(True,result)

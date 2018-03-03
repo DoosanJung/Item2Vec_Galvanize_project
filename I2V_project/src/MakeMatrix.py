@@ -60,6 +60,10 @@ class MakeMatrix(object):
         and a zero element represents neutral item by the user
         '''
         logger.info('Trying to make a item_matrix..')
+        up, down = self._up_down_limit(up, down)
+        if ((up == None) or (down == None)):
+            logger.error("1 <= up, down <= 5")
+            raise
         try:
             if not all(self.df.columns.isin([u'userId', u'movieId', u'rating', u'timestamp'])):
                 logger.error("df columns do not match")
@@ -87,6 +91,10 @@ class MakeMatrix(object):
         liked_item_numbers = []
         disliked_list = []
         logger.info("Trying to make item lists")
+        up, down = self._up_down_limit(up, down)
+        if ((up == None) or (down == None)):
+            logger.error("1 <= up, down <= 5")
+            raise
         try:
             if matrix == None:
                 matrix = self.get_item_matrix(up, down)
@@ -109,3 +117,8 @@ class MakeMatrix(object):
         except:
             logger.error("Failed to make item lists")
             raise
+
+    def _up_down_limit(self, up, down):
+        if not ((1 <= down) and (up <= 5)):
+            raise ValueError("1 <= up, down <= 5")
+        return up, down
